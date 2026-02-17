@@ -30,12 +30,25 @@ cd player_notes
 ```bash
 composer install
 npm install
---
-
-## Configuración
-
-### 4. Copiar el archivo de entorno
+```
+3. Copiar el archivo de entorno
 
 ```bash
 cp .env.example .env
+```
+
+4. Generar la clave de la aplicación
+
+```bash
+php artisan key:generate
+```
+
+5. Configurar las variables de entorno en tu archivo `.env` y ajusta según tu entorno local
+6. Ejecutar migraciones y seeders
+```bash
+php artisan migrate --seed
+```
+ 7. Correr proyecto
+```bash
+    composer run dev
 ```
